@@ -5,8 +5,14 @@ export function WorkspaceDetailPage() {
 
   return (
     <section>
-      <h1>Workspace Detail</h1>
-      <p>Workspace ID: {workspaceId}</p>
+      <header className="page-header">
+        <h1>Workspace Detail</h1>
+        <p>Review connection state, policy posture, and recent activity.</p>
+      </header>
+
+      <div className="placeholder-panel">
+        <p>Workspace ID: {workspaceId}</p>
+      </div>
     </section>
   )
 }

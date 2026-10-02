@@ -42,7 +42,10 @@ export function WorkspacesPage() {
         </p>
       </header>
 
-      <div className="workspace-panel">
+      <div
+        className="workspace-panel"
+        aria-busy={isLoading}
+      >
         <WorkspaceFilters
           searchTerm={searchTerm}
           statusFilter={statusFilter}
@@ -71,7 +74,11 @@ export function WorkspacesPage() {
           !error &&
           filteredWorkspaces.length > 0 && (
             <>
-              <div className="workspace-results-summary">
+              <div
+                className="workspace-results-summary"
+                role="status"
+                aria-live="polite"
+              >
                 {filteredWorkspaces.length}{' '}
                 {filteredWorkspaces.length === 1
                   ? 'workspace'

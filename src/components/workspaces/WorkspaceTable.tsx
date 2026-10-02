@@ -10,7 +10,11 @@ export function WorkspaceTable({
   workspaces,
 }: WorkspaceTableProps) {
   return (
-    <div className="workspace-table-wrapper">
+    <div
+      className="workspace-table-wrapper"
+      tabIndex={0}
+      aria-label="Workspace table. Scroll horizontally to view additional columns on smaller screens."
+    >
       <table className="workspace-table">
         <caption className="sr-only">
           Secure workspace inventory

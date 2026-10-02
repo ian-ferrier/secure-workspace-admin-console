@@ -337,6 +337,11 @@ select {
   overflow-x: auto;
 }
 
+.workspace-table-wrapper:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: -3px;
+}
+
 .workspace-table {
   width: 100%;
   min-width: 900px;

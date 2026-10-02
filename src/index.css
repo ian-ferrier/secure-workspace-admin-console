@@ -722,6 +722,137 @@ select {
   margin-top: 24px;
 }
 
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.metric-card {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid #dfe4ea;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 4%);
+}
+
+.metric-card-alert {
+  border-color: #ecc5c5;
+}
+
+.metric-label {
+  color: #687386;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.metric-value {
+  color: #172033;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.metric-card-alert .metric-value {
+  color: #9f2626;
+}
+
+.metric-meta {
+  color: #7a8495;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.6fr);
+  gap: 20px;
+}
+
+.overview-grid .detail-card {
+  margin-bottom: 0;
+}
+
+.status-summary {
+  display: grid;
+  gap: 4px;
+}
+
+.status-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.status-summary-row:last-child {
+  border-bottom: 0;
+}
+
+.status-summary-row > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-summary-row span {
+  color: #445065;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-summary-row strong {
+  color: #172033;
+  font-size: 0.925rem;
+}
+
+.status-summary-dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+}
+
+.status-summary-dot-online {
+  background: #16803c;
+}
+
+.status-summary-dot-degraded {
+  background: #d18b16;
+}
+
+.status-summary-dot-offline {
+  background: #7a8495;
+}
+
+.section-heading-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.section-heading-row h2 {
+  margin-bottom: 0;
+}
+
+.section-meta {
+  color: #8a94a4;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1050px) {
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 760px) {
   .app-header {
     position: static;
@@ -824,6 +955,10 @@ select {
   .dialog-actions .button {
     width: 100%;
   }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 520px) {
@@ -834,5 +969,9 @@ select {
 
   .main-content {
     padding-inline: 16px;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,4 +1,8 @@
+import { useWorkspaces } from '../hooks/useWorkspaces'
+
 export function WorkspacesPage() {
+  const { workspaces, isLoading, error } = useWorkspaces()
+
   return (
     <section>
       <header className="page-header">
@@ -7,7 +11,9 @@ export function WorkspacesPage() {
       </header>
 
       <div className="placeholder-panel">
-        <p>Workspace search, filters, and management table will go here.</p>
+        {isLoading && <p>Loading...</p>}
+        {error && <p>{error}</p>}
+        {!isLoading && !error && <p>{workspaces.length} workspaces loaded.</p>}
       </div>
     </section>
   )
